@@ -25,6 +25,7 @@
     align-items: center;
 }
 
+
 .header-left a,
 .header-right a {
     text-decoration: none;
@@ -79,6 +80,8 @@
     width: 280px;
     border: none;
     padding-left: 16px;
+    padding-right: 15px;
+    box-sizing: border-box;
 }
 
 .header-form button {
@@ -110,9 +113,12 @@
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
 }
 
-.header-right img {
+.cart {
     margin-left: 6px;
     margin-bottom: 2px;
+}
+.header-right a:hover .cart {
+    filter: contrast(0%);
 }
 
 .header {
@@ -263,7 +269,7 @@
     letter-spacing: 0.75px;
 }
 
-.product {
+.product-box {
     margin-top: 100px;
     margin-bottom: 113px;
 }
@@ -281,33 +287,56 @@
     margin-top: 12px;
     margin-bottom: 60px;
 }
-.product-content figure {
-    height: 364px;
+.product {
+    position: relative;
+    width: 261px;
     margin-bottom: 39px;
 }
-.product-link {
-    height: 276px;
+.product-add {
+    width: 123px;
+    height: 39px;
+    display: none;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    border: 1px solid #ffffff;
+    position: absolute;
+    top: 98px;
+    left: 70px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;    
+}
+.product-add img {
+    padding-right: 8px;
+}
+
+.product-img {
     width: 100%;
-    display: block;
-    background-image: url(img/product-hover.png);
 }
-.product-content figure img:hover {
-    opacity: 0;
-}
-.product-content figure:hover {
+.product:hover {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+}
+.product:hover .product-img {
+    filter: brightness(50%);
+}
+.product:hover .product-add {
+    display: flex;
 }
 .product-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.product-content figure figcaption h5 {
+.product-description h5 {
     font-size: 13px;
     font-weight: 400;
     margin-top: 18px;
     margin-bottom: 17px;
     margin-left: 15px;
+}
+.product-description {
+    margin-bottom: 21px;
 }
 .product-price {
     font-size: 16px;
@@ -331,4 +360,294 @@
 }
 .all-product:hover {
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.16);
+}
+
+.offer-content {
+    background-image: url(img/offer.png);
+    min-height: 529px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 97px;
+    position: relative;
+}
+.offer-text {
+    margin-top: 146px;
+    margin-left: 39px;
+}
+.offer-text h2 {
+    color: #ffffff;
+    font-size: 54px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+.offer-text h3 {
+    font-size: 32px;
+    letter-spacing: 0.9px;
+    color: #ffffff;
+}
+
+.feature-box {
+    background-color: #222224;
+    min-height: 529px;
+    width: 373px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.feature {
+    color: #fbfbfb;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.35px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.feature-img {
+    padding-right: 30px;
+}
+.feature a:hover .feature-img {
+    filter: contrast(50%);
+}
+
+.feature h5 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.feature-description {
+    width: 219px;
+}
+
+.subscribe {
+    height: 438px;
+    background: url(img/subscribe-layer.png) no-repeat;
+    background-size: cover;
+    margin-bottom: 109px;
+}
+
+.man {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 41px;
+}
+.man img {
+    margin-right: 28px;
+}
+
+.quote {
+    width: 386px;
+}
+
+.quote-text {
+    color: #222224;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 26px;
+    letter-spacing: 0.4px;
+    margin-bottom: 19px;
+}
+.author h6 {
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0.4px;
+    line-height: 26px;
+    color: #f16d7f;
+}
+.author p {
+    color: #222224;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    line-height: 14px;
+}
+.subscribe-mail h3 {
+    color: #222224;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.subscribe-mail h4 {
+    color: #222224;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.35px;
+    text-align: center;
+}
+.subscribe-mail form {
+    margin-top: 35px;
+    position: relative;
+}
+.subscribe-mail input {
+    width: 282px;
+    height: 46px;
+    border-radius: 23px 0 0 23px;
+    background-color: #e1e1e1;
+    border: none;
+    padding-left: 28px;
+    padding-right: 28px;
+    box-sizing: border-box;
+    color: #222224;
+    font-size: 14px;
+    font-weight: 400;
+}
+.subscribe-mail button {
+    width: 104px;
+    height: 46px;
+    border-radius: 0 23px 23px 0;
+    background-color: #f16d7f;
+    border: none;
+    box-shadow: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 0.35px;
+    cursor: pointer;
+    position: absolute;
+    left: 282px;
+}
+.subscribe-mail button:hover {
+    background-color: #d97583;
+}
+.subscribe-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 161px;
+}
+
+.slider-pagination {
+    display: flex;
+    justify-content: center;
+}
+.slider-pagination img {
+    margin-right: 13px;
+}
+
+.footer-text {
+    width: 427px;
+    color: #898989;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.35px;
+}
+.footer-logo .logo {
+    text-decoration: none;
+    margin-bottom: 29px;
+}
+.footer-company, .footer-information, .footer-shop-category {
+    padding-top: 14px;
+}
+.footer-company h3, .footer-information h3, .footer-shop-category h3 {
+    color: #f16d7f;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.45px;
+    margin-bottom: 24px;
+}
+.footer-company ul, .footer-information ul, .footer-shop-category ul {
+    list-style-type: none;
+}
+.footer-company li a, .footer-information li a, .footer-shop-category li a {
+    color: #898989;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    line-height: 59px;
+    letter-spacing: 0.4px;
+    line-height: 42px;
+    text-decoration: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.footer-company li a:hover, .footer-information li a:hover, .footer-shop-category li a:hover {
+    color: #222224;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-shop-category {
+    margin-right: 42px;
+}
+
+.footer-underline {
+    height: 79px;
+    background-color: #e6e6e6;
+    margin-top: 89px;
+}
+
+.social {
+    width: 32px;
+    height: 32px;
+    background-color: #FFF;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-box {
+    display: flex;
+}
+
+.footer-underline-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.social-link {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-link:hover {
+    background-color: #f16d7f;
+}
+.social-link:hover .social-icon {
+    filter: contrast(250%);
+}
+
+.social-icon-gray {
+    filter: contrast(50%);
+}
+
+.copyright {
+    color: #7a7a7a;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+}
+
+.offer-link {
+    display: block;
+    position: absolute;
+    width: 767px;
+    height: 529px;
+}
+.offer-link:hover {
+    background: #222;
+    opacity: 0.3;
 }
