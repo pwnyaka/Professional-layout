@@ -47,6 +47,9 @@ p
 
 .logo 
   margin-right: 37px
+  transition: all 0.3s
+  &:hover
+    transform: scale(1.03)
 
 .header-form 
   height: 38px
@@ -66,6 +69,7 @@ p
     background-color: transparent
     box-shadow: none
     cursor: pointer
+    transition: all 0.3s
     &:hover
       background-color: #eee
 
@@ -81,6 +85,7 @@ p
   display: flex
   align-items: center
   justify-content: center
+  transition: filter 0.3s
   &:hover
     filter: brightness(120%)
     color: #FFF
@@ -89,6 +94,7 @@ p
 .cart 
   margin-left: 6px
   margin-bottom: 2px
+  transition: filter 0.3s
 
 .header-right a:hover .cart 
   filter: contrast(0%)
@@ -109,12 +115,12 @@ p
     font-weight: 700
     line-height: 26px
     text-transform: uppercase
+    transition: all 0.3s
     &:hover
       text-decoration: none
       color: #f16d7f
 
-
-.promo 
+.promo
   background-color: #e8e8e8
   &-content
     height: 613px
@@ -152,23 +158,17 @@ p
   &-1
     width: 560px
     height: 542px
-    background-image: url(img/category-bg-1.png)
     position: relative
   &-2
     width: 560px
     height: 261px
-    background-image: url(img/category-bg-2.png)
-    background-repeat: no-repeat
-    background-color: #dadad2
   &-3
     width: 560px
     height: 261px
-    background-image: url(img/category-bg-3.png)
     align-self: flex-end
   &-4
     width: 560px
     height: 542px
-    background-image: url(img/category-bg-4.png)
     align-self: flex-end
   &-content
     display: flex
@@ -176,15 +176,17 @@ p
     flex-direction: column
     justify-content: space-between
     height: 823px
+  &-img
+    transition: all 0.3s
   &-link
     display: block
     width: 100%
     height: 100%
     text-decoration: none
     z-index: 1
-    &:hover
-      background-color: #333
-      opacity: 0.3
+    &:hover .category-img
+      transform: scale(1.01)
+      filter: brightness(80%)
   &-badge-1, &-badge-2, &-badge-3, &-badge-4
     margin-top: 26px
     background-color: #FFF
@@ -196,6 +198,7 @@ p
     padding-top: 16px
     box-sizing: border-box
     position: absolute
+    z-index: 2
   &-badge-1
     width: 175px
   &-badge-2
@@ -232,6 +235,7 @@ p
   position: relative
   width: 261px
   margin-bottom: 39px
+  transition: all 0.3s
   &-add
     width: 123px
     height: 39px
@@ -246,15 +250,19 @@ p
     justify-content: center
     align-items: center
     text-decoration: none
+    transition: all 0.3s
     &:hover
       box-shadow: 0 0 10px #fff
       color: #FFF
       text-decoration: none
+      transform: translateY(5px) scale(1.1)
     & img
       padding-right: 8px
   &-img
     width: 100%
+    transition: all 0.3s
   &:hover
+    transform: scale(1.02)
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
   &:hover .product-img
     filter: brightness(50%)
@@ -279,6 +287,7 @@ p
     margin-left: 15px
   &-all
     background-color: #f16d7f
+    border: 1px solid #f16d7f
     width: 212px
     height: 48px
     display: flex
@@ -290,9 +299,14 @@ p
     letter-spacing: 0.4px
     text-decoration: none
     margin: 0 auto
+    transition: all 0.6s
     &:hover
-      filter: brightness(120%)
+      transform: translateX(20px)
+      background-color: #FFF
+      color: #f16d7f
 
+.fa-long-arrow-alt-right
+  padding-left: 8px
 
 .offer-content 
   background-image: url(img/offer.png)
@@ -384,7 +398,7 @@ p
     height: 46px
     border-radius: 0 23px 23px 0
     background-color: #f16d7f
-    border: none
+    border: 1px solid #f16d7f
     box-shadow: none
     color: #ffffff
     font-size: 14px
@@ -394,8 +408,10 @@ p
     cursor: pointer
     position: absolute
     left: 282px
+    transition: all 0.3s
     &:hover
-      background-color: #d97583
+      background-color: #eee
+      color: #f16d7f
   &-content
     display: flex
     align-items: center
@@ -474,6 +490,7 @@ p
   text-decoration: none
   padding: 10px
   box-sizing: border-box
+  transition: all 0.3s
 
 .footer-company li a:hover, .footer-information li a:hover, .footer-shop-category li a:hover 
   color: #f16d7f
@@ -522,6 +539,7 @@ p
   display: flex
   align-items: center
   justify-content: center
+  transition: all 0.3s
 
 .social-link:hover 
   background-color: #f16d7f
@@ -559,6 +577,7 @@ p
   padding: 0 0 20px
   border: 1px solid #ececec
   top: 54px
+  z-index: 1
 
 .drop-last 
   right: 0
@@ -602,10 +621,10 @@ p
   line-height: 28px
   letter-spacing: 0.35px
   text-decoration: none
-
-.drop-link:hover 
-  color: #f16d7f
-  text-decoration: none
+  transition: all 0.1s
+  &:hover
+    color: #f16d7f
+    text-decoration: none
 
 
 .drop-ul 
@@ -643,16 +662,13 @@ p
 
 .drop-img 
   margin-top: 20px
-
-.drop-img:hover 
-  filter: brightness(50%)
+  transition: all 0.3s
+  &:hover
+    filter: brightness(50%)
 
 .browse-drop-box 
   position: relative
 
-
-.browse-drop-box:hover .drop 
-  display: flex
 
 .drop-browse 
   top: 38px
@@ -677,16 +693,18 @@ p
   border-top: 1px solid #e8e8e8
   border-left: 1px solid #e8e8e8
 
-.browse-drop-box 
-  background-color: #cdcdcc
+.browse-drop-box
+  background-color: #f9f9f9
   height: 38px
   width: 87px
-  background-image: linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%)
   color: #000
   font-size: 14px
   display: flex
   align-items: center
   justify-content: center
+  transition: all 1s
+  &:hover
+    background: linear-gradient(to bottom, #f9f9f9 0%, #ccc 100%)
 
 .browse-drop-box summary 
   display: flex
@@ -697,8 +715,6 @@ p
   height: 38px
   box-sizing: border-box
 
-.browse-drop-box:hover 
-  background-image: linear-gradient(to bottom, #f9f9f9 0%, #ccc 100%)
 
 summary::-webkit-details-marker 
   display: none
@@ -1130,6 +1146,7 @@ details[open] summary:after
   font-weight: bold
   line-height: 44px
   text-align: center
+  transition: all 0.3s
 
 .view-all:hover 
   background-color: #ef5b70
@@ -1386,6 +1403,7 @@ p.single-product-description-price
   border: 1px solid #ef5b70
   background-color: #ffffff
   margin-top: 28px
+  transition: all 0.3s
   &:hover
     background-color: #ef5b70
     color: #ffffff
@@ -1394,6 +1412,7 @@ p.single-product-description-price
     filter: brightness(300%)
   &-img
     padding-right: 15px
+    transition: all 0.3s
 
 .single-product-also-content
   display: flex
@@ -1412,3 +1431,221 @@ p.single-product-description-price
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+
+.cart-content
+  margin-bottom: 80px
+  &__header
+    display: flex
+    list-style-type: none
+    justify-content: space-between
+    padding-bottom: 20px
+    border-bottom: 1px solid #eaeaea
+    margin-bottom: 0
+    &__list
+      color: #222222
+      font-size: 13px
+      font-weight: 700
+      line-height: 20px
+      text-transform: uppercase
+      &:first-of-type
+        padding-right: 300px
+  &__product
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-right: 18px
+    padding-bottom: 25px
+    margin-top: 22px
+    border-bottom: 1px solid #eaeaea
+    &__details
+      width: 278px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-right: 130px
+      &__ul
+        list-style-type: none
+        margin-bottom: 0
+        &__li
+          color: #6f6e6e
+          font-size: 13px
+          font-weight: 300
+          line-height: 20px
+          &_bold
+            color: #575757
+            font-weight: 600
+          &_header
+            color: #222222
+            font-size: 13px
+            font-weight: 400
+            text-transform: uppercase
+            padding-bottom: 38px
+    &__quantity
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 54px
+      height: 30px
+      border: 1px solid #eaeaea
+      margin-left: 10px
+    &__action
+      padding-left: 10px
+      cursor: pointer
+      transition: all 0.3s
+      &:hover
+        filter: brightness(50%)
+  &__button
+    display: flex
+    justify-content: space-between
+    margin-top: 44px
+    margin-bottom: 63px
+    &__clear
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 235px
+      height: 50px
+      border: 1px solid #eaeaea
+      background-color: #ffffff
+      color: #4a4a4a
+      font-size: 14px
+      font-weight: 700
+      text-transform: uppercase
+      transition: all 0.3s
+      &:hover
+        text-decoration: none
+        color: #FFFFFF
+        background-color: #4a4a4a
+    &__continue
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 225px
+      height: 50px
+      border: 1px solid #eaeaea
+      background-color: #ffffff
+      color: #4a4a4a
+      font-size: 14px
+      font-weight: 700
+      text-transform: uppercase
+      transition: all 0.3s
+      &:hover
+        text-decoration: none
+        color: #FFFFFF
+        background-color: #4a4a4a
+  &__footer
+    display: flex
+    justify-content: space-between
+    &__adress
+      width: 355px
+      & input
+        padding-left: 18px
+        padding-right: 20px
+        width: 355px
+        height: 45px
+        border: 1px solid #eaeaea
+        background-color: #ffffff
+        font-size: 13px
+        font-weight: 300
+        margin-top: 20px
+        &:last-of-type
+          width: 100px
+          height: 35px
+          color: #4a4a4a
+          font-size: 11px
+          font-weight: 700
+          text-transform: uppercase
+          padding: 0
+          transition: all 0.3s
+          &:hover
+            background-color: #4a4a4a
+            color: #FFFFFF
+      & h3
+        color: #222222
+        font-size: 16px
+        font-weight: 700
+        text-transform: uppercase
+        margin-bottom: 0
+    &__discount
+      width: 355px
+      & h3
+        color: #222222
+        font-size: 16px
+        font-weight: 700
+        text-transform: uppercase
+        margin-bottom: 0
+      & label
+        color: #000000
+        font-size: 14px
+        font-weight: 300
+        margin-top: 28px
+      & input
+        padding-left: 18px
+        padding-right: 20px
+        width: 355px
+        height: 45px
+        border: 1px solid #eaeaea
+        background-color: #ffffff
+        font-size: 13px
+        font-weight: 300
+        margin-top: 25px
+        &:last-of-type
+          width: 100px
+          height: 35px
+          color: #4a4a4a
+          font-size: 11px
+          font-weight: 700
+          text-transform: uppercase
+          padding: 0
+          transition: all 0.3s
+          &:hover
+            background-color: #4a4a4a
+            color: #FFFFFF
+    &__check
+      width: 360px
+      height: 214px
+      background-color: #f5f3f3
+      padding: 42px
+      box-sizing: border-box
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      & hr
+        height: 1px
+        width: 100%
+        background-color: #e2e2e2
+        margin-top: 22px
+        margin-bottom: 17px
+      &__sub
+        color: #4a4a4a
+        font-size: 11px
+        font-weight: 400
+        text-transform: uppercase
+        &__value
+          padding-left: 15px
+      &__total
+        color: #222222
+        font-size: 16px
+        font-weight: 700
+        text-transform: uppercase
+        margin-top: 14px
+        &__value
+          color: #f16d7f
+          padding-left: 15px
+      & a
+        width: 273px
+        height: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: #f16d7f
+        color: #ffffff
+        font-size: 16px
+        font-weight: 700
+        text-transform: uppercase
+        transition: all 0.3s
+        border: 1px solid #f16d7f
+        &:hover
+          background-color: #f5f3f3
+          color: #f16d7f
+          text-decoration: none
