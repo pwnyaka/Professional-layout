@@ -45,12 +45,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.checkout.html">
+    <configuration name="Shopping-cart.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PS layout/Shopping-cart.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="Single-page.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PS layout/Single-page.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="checkout.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PS layout/checkout.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.checkout.html" />
+        <item itemvalue="JavaScript Debug.Shopping-cart.html" />
         <item itemvalue="JavaScript Debug.Single-page.html" />
       </list>
     </recent_temporary>
@@ -72,6 +80,12 @@
       <workItem from="1570350881811" duration="244000" />
       <workItem from="1570351148832" duration="17247000" />
       <workItem from="1570372934955" duration="1393000" />
+      <workItem from="1570719473655" duration="339000" />
+      <workItem from="1570719844092" duration="626000" />
+      <workItem from="1570720491767" duration="30000" />
+      <workItem from="1570720540298" duration="4461000" />
+      <workItem from="1570808370175" duration="9864000" />
+      <workItem from="1570881735740" duration="41000" />
     </task>
     <servers />
   </component>
